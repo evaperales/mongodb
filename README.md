@@ -2,15 +2,15 @@
 
 ## Instalación de MongoDB
 
-Esta instalación ha sido probada en **Ubuntu 16.10**. Para otras plataformas ir a la [página oficial de MongoDB](https://www.mongodb.com/es).
+Esta instalación ha sido probada en **Ubuntu 16.10** y **Ubuntu 18.04**. Para otras plataformas ir a la [página oficial de MongoDB](https://www.mongodb.com/es).
 
-### Importar la clave pública
+### Importar la clave pública **Ubuntu 16.10**
 
 ```console
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 ```
 
-### Crear una lista de ficheros para MongoDB
+### Crear una lista de ficheros para MongoDB **Ubuntu 16.10**
 
 ```console
 echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
@@ -22,10 +22,15 @@ echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb
 sudo apt-get update
 ```
 
-### Instalar los paquetes de MongoDB
+### Instalar los paquetes de MongoDB **Ubuntu 16.10**
 
 ```console
 sudo apt-get install -y mongodb-org
+```
+
+### Instalar los paquetes de MongoDB **Ubuntu 18.04**
+```console
+sudo apt-get install -y mongodb
 ```
 
 ### Lanzar el demonio
