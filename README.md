@@ -33,18 +33,31 @@ sudo apt-get install -y mongodb-org
 sudo apt-get install -y mongodb
 ```
 
-### Lanzar el demonio
+### Lanzar el demonio **Ubuntu 16.10**
 
 ```console
 sudo service mongod start
 ```
 
-### Arranque automático del servicio
+### Lanzar el demonio **Ubuntu 18.04**
+```console
+sudo systemctl start mongodb
+```
+
+### Arranque automático del servicio **Ubuntu 16.10**
 
 Si vamos a utilizar con frecuencia MongoDB, lo mejor es hacer que el demonio se lance de forma automática cada vez que arranca el sistema.
 
 ```console
 sudo systemctl enable mongod.service
+```
+
+### Arranque automático del servicio **Ubuntu 18.04**
+
+Si vamos a utilizar con frecuencia MongoDB, lo mejor es hacer que el demonio se lance de forma automática cada vez que arranca el sistema.
+
+```console
+sudo systemctl enable mongodb
 ```
 
 ## Ejecutar el interfaz de línea de comandos de MongoDB
